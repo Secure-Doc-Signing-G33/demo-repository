@@ -7,23 +7,9 @@ A command-line implementation of a digital diploma signing and verification prot
 ---
 
 ## Protocol Summary
+<img width="402" height="350" alt="image" src="https://github.com/user-attachments/assets/b45e83d4-a750-4bc8-b740-519e6dd7d242" />
 
-```
-University                     Student                    Employer (Verifier)
-─────────────                  ───────                    ───────────────────
-Generate ECDSA key pair
-  privKey, pubKey
-                               
-Diploma → JSON (canonical)
-SHA-256(diploma) = H
-Sign H with privKey → sig
-Bundle (diploma + sig) → cert
-                    ──── cert ──────────────────────────>
-                                                         Get pubKey (trusted source)
-                                                         Re-hash diploma → H'
-                                                         Verify sig with pubKey, H'
-                                                         If H' matches sig → VALID
-```
+
 
 ---
 
