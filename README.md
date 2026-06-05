@@ -51,6 +51,7 @@ secure_doc_signing/
 ├── keys/                 # Generated PEM key files
 ├── diplomas/             # Raw diploma JSON files
 ├── signatures/           # Signed certificate JSON files
+├── diploma_gui.py/           # GUI
 └── tests/
     └── test_protocol.py  # 9 test cases covering success and attack scenarios
 ```
@@ -97,15 +98,15 @@ secure_doc_signing/
 
 | ID | Scenario | Expected |
 |---|---|---|
-| TC-01 | Normal sign → verify | ✅ VALID |
-| TC-02 | Tampered student name | ❌ INVALID |
-| TC-03 | Tampered degree field | ❌ INVALID |
-| TC-04 | Wrong university public key | ❌ INVALID |
-| TC-05 | Corrupted signature bytes | ❌ INVALID |
-| TC-06 | Multiple university identities | ✅ VALID (own), ❌ INVALID (cross) |
+| TC-01 | Normal sign → verify |  VALID |
+| TC-02 | Tampered student name |  INVALID |
+| TC-03 | Tampered degree field |  INVALID |
+| TC-04 | Wrong university public key |  INVALID |
+| TC-05 | Corrupted signature bytes |  INVALID |
+| TC-06 | Multiple university identities |  VALID (own),  INVALID (cross) |
 | TC-07 | Avalanche effect demonstration | Shown visually |
-| TC-08 | Missing signature field | ❌ INVALID (graceful) |
-| TC-09 | Envelope metadata changes | ✅ VALID (only diploma is hashed) |
+| TC-08 | Missing signature field | INVALID (graceful) |
+| TC-09 | Envelope metadata changes |  VALID (only diploma is hashed) |
 
 ---
 
