@@ -1,0 +1,17 @@
+{
+  "diploma": {
+    "student_name": "Sabah Mohamed Alanazi",
+    "student_id": "441193701",
+    "degree": "Bachelor of Science in Medicine",
+    "graduation_date": "2026-06-01",
+    "university": "Umm Al-Qura University",
+    "issuer": "Office of the Registrar",
+    "diploma_id": "UQU-2026-441193701"
+  },
+  "signature": "304402203c5269367489025c069d4c6a79b47de9a4116b3814361446a94f024378b655910220068c846a32389a49df47c67c7ff54550e324af57f63f91c83d1bd907024077c0",
+  "algorithm": "ECDSA",
+  "hash_algorithm": "SHA-256",
+  "curve": "SECP256K1",
+  "university_id": "UQU",
+  "issued_at": "2026-05-25T17:29:05.151090+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "diploma": {
+    "student_name": "reem",
+    "student_id": "444000459",
+    "degree": "cyber security",
+    "graduation_date": "2026-05-25",
+    "university": "Umm Al-Qura University",
+    "issuer": "Office of the Registrar",
+    "diploma_id": "UQU-2026-444000459"
+  },
+  "signature": "304502206b87b48dcea642495c6d6c6b50a85a038e71e09054c0af353e14185cb0e0794a022100aaabb6bbcb363c10518a0c50b7f9f389c024f860767fab3a4b5482c98902fbc7",
+  "algorithm": "ECDSA",
+  "hash_algorithm": "SHA-256",
+  "curve": "SECP256K1",
+  "university_id": "UQU",
+  "issued_at": "2026-05-25T17:43:19.629536+00:00"
+}

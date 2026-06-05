@@ -1,0 +1,17 @@
+{
+  "diploma": {
+    "student_name": "Sabah Alanazi",
+    "student_id": "441193701",
+    "degree": "B.Sc. Computer Science",
+    "graduation_date": "2026-06-01",
+    "university": "Umm Al-Qura University",
+    "issuer": "Office of the Registrar",
+    "diploma_id": "UQU-2026-441193701"
+  },
+  "signature": "3044022058192ca3ade7988a9cbc7bae5cb1844f29de1e8dca42b966c708ec4156e9da7702206916f0ce2bb8462bb7a07b385a23cf51b6704d173fc6c36f38f17792033a98ea",
+  "algorithm": "ECDSA",
+  "hash_algorithm": "SHA-256",
+  "curve": "SECP256K1",
+  "university_id": "UQU",
+  "issued_at": "2026-05-25T17:35:10.923713+00:00"
+}

@@ -1,0 +1,180 @@
+╔════════════════════════════════════════════════════════════════╗
+║                     QUICK START GUIDE                          ║
+║          Interactive Diploma Signing System                    ║
+╚════════════════════════════════════════════════════════════════╝
+
+🎓 WHAT'S NEW?
+─────────────────────────────────────────────────────────────────
+✅ NO MORE HARDCODED DATA!
+✅ Users and signatures are generated dynamically
+✅ Enter your own information and get a signature instantly
+✅ Two interfaces: Command-line and Web
+
+📦 WHAT'S INCLUDED?
+─────────────────────────────────────────────────────────────────
+NEW FILES:
+  • interactive_signer.py    - Interactive command-line interface
+  • web_interface.html       - Beautiful web interface
+  • INTERACTIVE_README.md    - Detailed documentation
+  • QUICKSTART.txt          - This file
+
+ORIGINAL FILES:
+  • demo.py                  - Original hardcoded demo
+  • signer.py               - Core signing logic
+  • verifier.py             - Verification logic
+  • key_manager.py          - Key management
+  • crypto_utils.py         - Crypto utilities
+
+🚀 GET STARTED IN 3 STEPS
+─────────────────────────────────────────────────────────────────
+
+OPTION 1: Command-Line Interface (Recommended)
+───────────────────────────────────────────────
+
+  Step 1: Install requirements
+    $ pip install cryptography
+
+  Step 2: Run the interactive signer
+    $ python interactive_signer.py
+
+  Step 3: Follow the prompts!
+    - Enter university information
+    - Enter student details
+    - Enter degree information
+    - Get your signed certificate!
+
+OPTION 2: Web Interface (Easy & Visual)
+───────────────────────────────────────────────
+
+  Step 1: Open the web interface
+    $ open web_interface.html
+    # or just double-click the file
+
+  Step 2: Fill in the form
+    - University ID and name
+    - Student name and ID
+    - Degree information
+    - Graduation date
+
+  Step 3: Click "Generate Signature"
+    - View the generated certificate
+    - See the cryptographic details
+
+📋 EXAMPLE USAGE
+─────────────────────────────────────────────────────────────────
+
+Command Line Example:
+  $ python interactive_signer.py
+  
+  > Enter university ID: MIT
+  > Student full name: John Smith
+  > Student ID number: 123456
+  > Degree name: Bachelor of Science in Computer Science
+  > Graduation date: 2026-05-23
+  > Honors: Magna Cum Laude
+  
+  ✅ Certificate generated and saved!
+  📄 File: signatures/john_smith_diploma.cert.json
+
+Web Interface Example:
+  1. Open web_interface.html in browser
+  2. Fill form with your information
+  3. Click "Generate Signature" button
+  4. See your certificate details instantly!
+
+🔐 HOW IT WORKS
+─────────────────────────────────────────────────────────────────
+1. You enter diploma information (name, degree, etc.)
+2. System generates cryptographic keys for university (if new)
+3. Diploma content is hashed using SHA-256
+4. Hash is signed using ECDSA (Elliptic Curve)
+5. Certificate is created with signature
+6. Anyone can verify authenticity using public key
+
+💡 KEY FEATURES
+─────────────────────────────────────────────────────────────────
+✓ Dynamic Generation  - No hardcoded users
+✓ Secure Signing      - ECDSA with SECP256K1 curve
+✓ Tamper Detection    - Any change breaks signature
+✓ Easy Verification   - Public key verification
+✓ User Friendly       - Interactive prompts
+✓ Professional Output - JSON certificate files
+
+📁 OUTPUT FILES
+─────────────────────────────────────────────────────────────────
+After signing, you'll find:
+
+  keys/
+    └── MIT_private.pem       - Private key (keep secure!)
+    └── MIT_public.pem        - Public key (share freely)
+
+  signatures/
+    └── john_smith_diploma.cert.json  - Signed certificate
+
+🔍 VERIFY A CERTIFICATE
+─────────────────────────────────────────────────────────────────
+To verify any generated certificate:
+
+  $ python verifier.py signatures/your_certificate.cert.json --university MIT
+
+Or use the verification function in code:
+  
+  from verifier import verify_certificate
+  
+  with open('signatures/cert.json') as f:
+      cert = json.load(f)
+  
+  result = verify_certificate(cert, university_id="MIT")
+  print(result['status'])  # VALID or INVALID
+
+⚠️ IMPORTANT NOTES
+─────────────────────────────────────────────────────────────────
+• Private keys are stored in keys/ directory - keep them secure!
+• Each university needs its own key pair
+• Signatures are deterministic (same input = same signature)
+• Any tampering will be detected during verification
+• Web interface is a demo - for production, use Python backend
+
+🎯 COMMON USE CASES
+─────────────────────────────────────────────────────────────────
+✓ Issue diplomas to students
+✓ Generate certificates for courses
+✓ Create signed documents
+✓ Learn about digital signatures
+✓ Understand cryptographic authentication
+
+🆘 TROUBLESHOOTING
+─────────────────────────────────────────────────────────────────
+Problem: "Module not found: cryptography"
+Solution: pip install cryptography
+
+Problem: "No such file or directory: keys/"
+Solution: Directories are created automatically on first run
+
+Problem: "Invalid signature"
+Solution: Check that you're using the correct university ID
+
+Problem: Web interface not signing
+Solution: Web version is a demo - use Python CLI for real signing
+
+📚 MORE INFORMATION
+─────────────────────────────────────────────────────────────────
+For detailed documentation, see:
+  • INTERACTIVE_README.md  - Full documentation
+  • README.md              - Original project info
+
+For code examples, see:
+  • demo.py                - Example usage
+  • tests/                 - Test cases
+
+🎉 YOU'RE READY!
+─────────────────────────────────────────────────────────────────
+Just run:
+  $ python interactive_signer.py
+
+And start generating signatures from your own data!
+
+Questions? Check the README files or examine the code.
+Have fun with cryptographic signatures! 🔐
+
+═══════════════════════════════════════════════════════════════

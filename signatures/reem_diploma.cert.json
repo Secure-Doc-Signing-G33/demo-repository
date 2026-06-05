@@ -1,0 +1,17 @@
+{
+  "diploma": {
+    "student_name": "Reem Abdullah Al-Zahrani",
+    "student_id": "44512000",
+    "degree": "Bachelor of Science in Information Technology",
+    "graduation_date": "2026-06-01",
+    "university": "King Abdulaziz University",
+    "issuer": "Office of the Registrar",
+    "diploma_id": "KAU-2026-IT-005678"
+  },
+  "signature": "30440220474acc3c783463ad05b35ec17ad1eea1e7205b577401ade3a51fa1daeceeb9690220328b866c228f44809b5382d8b5172f04b6e364d89b26adc120da2cbfeed0d56a",
+  "algorithm": "ECDSA",
+  "hash_algorithm": "SHA-256",
+  "curve": "SECP256K1",
+  "university_id": "KAU",
+  "issued_at": "2026-05-21T07:27:52.233820+00:00"
+}

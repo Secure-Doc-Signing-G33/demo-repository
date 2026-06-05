@@ -1,0 +1,17 @@
+{
+  "diploma": {
+    "student_name": "Rayah Mohammed",
+    "student_id": "441349299",
+    "degree": "Doctor of Philosophy",
+    "graduation_date": "2019-03-01",
+    "university": "Umm Al-Qura University",
+    "issuer": "Office of the Registrar",
+    "diploma_id": "UQU-2019-FAKE-001"
+  },
+  "signature": "30440220782a12bd76d5dc58c83d6b826582071b228c2d00b3642ac4a58dfd9991cf0f9f022014db2cc16262475bf878a0b63c5f6c6489468b5704ec8bd7f10b74487529b8f0",
+  "algorithm": "ECDSA",
+  "hash_algorithm": "SHA-256",
+  "curve": "SECP256K1",
+  "university_id": "UQU",
+  "issued_at": "2026-05-26T17:19:29.831287+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "diploma": {
+    "student_name": "Sara Hassan Alharbi",
+    "student_id": "112233445",
+    "degree": "Software Engineering",
+    "graduation_date": "2026-05-30",
+    "university": "King Fahd University of Petroleum and Minerals",
+    "issuer": "Office of the Registrar",
+    "diploma_id": "KFUPM-2026-112233445"
+  },
+  "signature": "304502205193289aed6f2da95191919349fdb9377355885d10cc10a88a5c99d9139d33b70221009b4622a6bb85ce92986927b2787e1b8f8c5f6f01370d12a6b0552c8fbb670d5f",
+  "algorithm": "ECDSA",
+  "hash_algorithm": "SHA-256",
+  "curve": "SECP256K1",
+  "university_id": "KFUPM",
+  "issued_at": "2026-05-26T16:52:16.619052+00:00"
+}
