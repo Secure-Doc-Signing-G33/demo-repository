@@ -1,10 +1,10 @@
 
 
-Launching
-1.Put file inside the `signing_v4/` folder next to crypto_utils.py
-2. run python3 -m pip install cryptography
-3. run python diploma_gui.py
-"""
+# Launching
+#Put file inside the "signing_v4" folder next to crypto_utils.py
+#run python3 -m pip install cryptography
+#run python diploma_gui.py
+
 
 import io
 import json
@@ -15,7 +15,7 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
-# ── Project crypto (the SAME code used everywhere else) ───────────────────────
+
 from crypto_utils import (
     diploma_to_canonical_bytes,
     hash_hex,
@@ -29,7 +29,7 @@ from signer import sign_diploma, save_certificate, SIGNATURES_DIR
 from verifier import verify_certificate, VALID
 from key_manager import generate_key_pair, list_identities
 
-# ── University reference data (codes -> full names) ──────────────────────────
+
 SAUDI_UNIVERSITIES = {
     "KSU":     "King Saud University",
     "UQU":     "Umm Al-Qura University",
@@ -62,7 +62,6 @@ SAUDI_UNIVERSITIES = {
     "BMC":     "Batterjee Medical College",
 }
 
-# ── Palette ──────────────────────────────────────────────────────────────────
 BG       = "#0f1c2e"   # deep navy
 PANEL    = "#16263d"
 ACCENT   = "#2e8b8b"   # teal
@@ -111,7 +110,7 @@ class DiplomaApp(tk.Tk):
         self._build_manage_tab()
         self.refresh_manage()
 
-    # ── styling ───────────────────────────────────────────────────────────
+    # styling 
     def _init_style(self):
         s = ttk.Style(self)
         try:
@@ -148,7 +147,7 @@ class DiplomaApp(tk.Tk):
                  text="ECDSA · SECP256K1 · SHA-256 · canonical JSON — identical crypto to the CLI & server",
                  font=("Segoe UI", 9), bg=BG, fg=MUTED).pack(anchor="w")
 
-    # ── helpers ───────────────────────────────────────────────────────────
+    # helpers
     def _field(self, parent, label, row, default="", width=46):
         ttk.Label(parent, text=label).grid(row=row, column=0, sticky="w",
                                             padx=(0, 12), pady=6)
@@ -171,7 +170,7 @@ class DiplomaApp(tk.Tk):
         box.insert("end", text)
         box.configure(state="disabled")
 
-    # ── SIGN TAB ────────────────────────────────────────────────────────────
+    # SIGN TAB 
     def _build_sign_tab(self):
         f = self.sign_tab
         for i in range(2):
@@ -254,8 +253,7 @@ class DiplomaApp(tk.Tk):
             if not val:
                 return messagebox.showerror("Missing", f"{label} is required.")
 
-        # Build the diploma EXACTLY as server.py/signer.py do (same field order
-        # irrelevant — canonicalization sorts keys; full university name stored).
+        
         diploma = {
             "student_name":    name,
             "student_id":      sid,
@@ -303,7 +301,7 @@ class DiplomaApp(tk.Tk):
         self.refresh_manage()
         messagebox.showinfo("Signed", f"Diploma signed and saved:\n{cert_file}")
 
-    # ── VERIFY TAB ──────────────────────────────────────────────────────────
+    # VERIFY TAB 
     def _build_verify_tab(self):
         f = self.verify_tab
         f.grid_columnconfigure(0, weight=1)
@@ -401,7 +399,7 @@ class DiplomaApp(tk.Tk):
     def _set_verdict(self, ok, text):
         self.verdict.configure(text=text, fg=OK if ok else BAD)
 
-    # ── MANAGE TAB ────────────────────────────────────────────────────────────
+    # MANAGE TAB 
     def _build_manage_tab(self):
         f = self.manage_tab
         f.grid_columnconfigure(0, weight=1)
